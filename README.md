@@ -1,4 +1,4 @@
-# LLM_robustness_NLI
+# Overview
 
 This is the repo for the paper _**Improving the OOD Performance of Closed-Source LLMs on NLI \\Through Strategic Data Selection**_, published at EACL Findings 2026.
 
