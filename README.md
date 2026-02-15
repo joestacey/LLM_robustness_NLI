@@ -2,10 +2,16 @@
 
 This is the repo for the paper _**Improving the OOD Performance of Closed-Source LLMs on NLI Through Strategic Data Selection**_, published at EACL Findings 2026.
 
-### Instructions below:
+[You can find the paper here](https://arxiv.org/pdf/2505.20209)
 
-- The datasets used for each method (for gpt-4o-mini) are saved in saved_data_for_training
-- To reproduce the gpt-4o-mini results in the paper, first fine-tune a model with these datasets (follow Section 1), then perform inference using this model (follow Section 5), and finally for evaluation follow Section 6.
+<img width="663" height="214" alt="Screenshot 2026-02-15 at 20 06 35" src="https://github.com/user-attachments/assets/aa671f7c-caaa-42c1-8822-8a9e0a93c9af" />
+
+For any questions, please contact j.stacey@sheffield.ac.uk
+
+### Instructions for using this repo:
+
+- The datasets created for each method (for gpt-4o-mini) are saved in saved_data_for_training
+- To reproduce the gpt-4o-mini results in the paper, first fine-tune a model with these datasets (follow Section 1), then perform inference using this model (follow Section 5), and finally follow Section 6 for evaluation.
 - If you are recreating each training dataset from scratch, please follow Sections 1-6 in full. Please note that openai responses are not fully deterministic, and the datasets created will differ from those in saved_data_for_training.
 
 ### Section 1. Fine-tuning models
