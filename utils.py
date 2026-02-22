@@ -171,6 +171,11 @@ def load_hf_dataset(description, split_name, from_file=False, aug_data_location=
 
         return loaded_data
 
+    elif description.startswith("unlabelled_"):
+
+        location = description[description.find("unlabelled_")+len("unlabelled_"):]
+        return load_from_disk('unlabelled_data/' + location)
+
     else:
 
         loaded_data = load_dataset(

@@ -470,7 +470,7 @@ def perform_all_sampling(train_data, params, run_num):
         train_data_nextsplit = train_data_nextsplit.cast_column("label", label_type)
 
     elif params.method_name == 'unlab':
-        train_data_nextsplit = load_from_disk('labelled_unlabelled_data/' + params.unlab_data_location)
+        train_data_nextsplit = load_from_disk('labelled_generated_data/' + params.unlab_data_location)
         train_data_nextsplit = train_data_nextsplit.filter(lambda example: example['label'] in [0, 1, 2])
         label_type = ClassLabel(names=['entailment', 'neutral', 'contradiction'])
         train_data_nextsplit = train_data_nextsplit.cast_column("label", label_type)

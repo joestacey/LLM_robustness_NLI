@@ -69,7 +69,21 @@ To be added...
 
 ### Section 4. Generating the synthetic data
 
-To be added...
+- First, we generate the premises (either as single sentences or four sentences, with four sentences for the complex data):
+
+python generate_unlabelled_premises.py --model gpt4mini --name_id file_name_to_use --sentences four
+
+- Next, we generate the hypotheses (this was performed x5 for our experiments combining these outputs):
+
+python generate_complex_hypotheses.py --model_type gpt4mini --name_id desired_name_of_dataset --premise_file file_name_from_saved_premises
+
+- Finally, we use the 'if in doubt, discard' approach to label the synthetic data:
+
+python generate_labels_for_unlabelled_data.py --model_type gpt4mini --dataset_location name_of_saved_data
+
+- To create a training set that incorporates this data, use: 
+
+python create_train_data.py --description snli --split_name train --do_replacement 1 --upload_to_openai no --name_id labelled_data_long_complex --method_name unlab --unlab_data_location training_data_long_complex_generation_gpt
 
 ### Section 5. Running inference from a fine-tuned model
 
