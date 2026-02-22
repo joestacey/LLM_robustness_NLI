@@ -65,7 +65,9 @@ python run_inference.py --model_type gpt4mini --name_id training_preds_baseline 
 
 ### Section 3c. Creating the snli_concat_data file required in section 2:
 
-To be added...
+- This file is already provided in this repo. However, to recreate this snli_concat_data.hf file within concat_data/ use:
+
+python concat_hypothesis_prep.py --name_id snli_concat_data --description snli --split_name train
 
 ### Section 4. Generating the synthetic data
 
